@@ -1,0 +1,40 @@
+﻿@model IEnumerable<TP3.Models.Movie>
+@{
+    ViewData["Title"] = "Movie List";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <title>Movie List</title>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <a asp-action="Create" class="btn btn-primary">Add Movie</a>
+
+        <h2 class="mb-4">Movie List</h2>
+
+        <div class="row">
+            @foreach (var movie in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="@movie.ImagePath" class="card-img-top" alt="Movie Image">
+                        <div class="card-body">
+                            <h5 class="card-title">@movie.Title</h5>
+                            <p class="card-text">Genre: @movie.Genre?.GenreName</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
