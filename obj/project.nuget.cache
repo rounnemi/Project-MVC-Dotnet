@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "45W5AR6hYugo7HSAz5wdlyF/troeipNs7HJRhDC6N+pstIUJUB2li8QVvFogE/uJfVVxhJs9a6wbdj3vXPaLoQ==",
+  "dgSpecHash": "9FmM7emUChBRyElutLyAxa7vGtk1ECdMWxcZVM9QAj/hKsTYjtLjOeov+YF+5Pve/VtPWZg5VUjIbUsvGOa1uA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\TP3\\TP3.csproj",
+  "projectFilePath": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\TP3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nour soussia\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\nour soussia\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

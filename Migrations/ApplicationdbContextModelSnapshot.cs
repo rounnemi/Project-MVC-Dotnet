@@ -125,6 +125,29 @@ namespace TP3.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Memberships");
+
+                    b.HasData(
+                        new
+                        {
+                            id = "1",
+                            DiscountRate = 0.05f,
+                            DurationINMonth = 1,
+                            SignUpfee = "10.00"
+                        },
+                        new
+                        {
+                            id = "2",
+                            DiscountRate = 0.1f,
+                            DurationINMonth = 3,
+                            SignUpfee = "20.00"
+                        },
+                        new
+                        {
+                            id = "3",
+                            DiscountRate = 0.15f,
+                            DurationINMonth = 6,
+                            SignUpfee = "30.00"
+                        });
                 });
 
             modelBuilder.Entity("CustomerMovie", b =>

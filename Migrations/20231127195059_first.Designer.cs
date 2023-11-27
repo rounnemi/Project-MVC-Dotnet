@@ -12,8 +12,8 @@ using TP3.Models;
 namespace TP3.Migrations
 {
     [DbContext(typeof(ApplicationdbContext))]
-    [Migration("20231120201836_1")]
-    partial class _1
+    [Migration("20231127195059_first")]
+    partial class first
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -128,6 +128,29 @@ namespace TP3.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Memberships");
+
+                    b.HasData(
+                        new
+                        {
+                            id = "1",
+                            DiscountRate = 0.05f,
+                            DurationINMonth = 1,
+                            SignUpfee = "10.00"
+                        },
+                        new
+                        {
+                            id = "2",
+                            DiscountRate = 0.1f,
+                            DurationINMonth = 3,
+                            SignUpfee = "20.00"
+                        },
+                        new
+                        {
+                            id = "3",
+                            DiscountRate = 0.15f,
+                            DurationINMonth = 6,
+                            SignUpfee = "30.00"
+                        });
                 });
 
             modelBuilder.Entity("CustomerMovie", b =>

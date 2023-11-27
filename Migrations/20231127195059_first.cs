@@ -7,7 +7,7 @@
 namespace TP3.Migrations
 {
     /// <inheritdoc />
-    public partial class _1 : Migration
+    public partial class first : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -110,6 +110,16 @@ namespace TP3.Migrations
                 {
                     { 1, null },
                     { 2, null }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Memberships",
+                columns: new[] { "id", "DiscountRate", "DurationINMonth", "SignUpfee" },
+                values: new object[,]
+                {
+                    { "1", 0.05f, 1, "10.00" },
+                    { "2", 0.1f, 3, "20.00" },
+                    { "3", 0.15f, 6, "30.00" }
                 });
 
             migrationBuilder.CreateIndex(

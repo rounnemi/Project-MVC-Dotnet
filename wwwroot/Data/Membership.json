@@ -1,0 +1,20 @@
+﻿[
+  {
+    "id": "offre 1",
+    "SignUpfee": "10.00",
+    "DurationINMonth": 1,
+    "DiscountRate": 0.05
+  },
+  {
+    "id": "offre 2",
+    "SignUpfee": "20.00",
+    "DurationINMonth": 3,
+    "DiscountRate": 0.1
+  },
+  {
+    "id": "offre 3",
+    "SignUpfee": "30.00",
+    "DurationINMonth": 6,
+    "DiscountRate": 0.15
+  }
+]

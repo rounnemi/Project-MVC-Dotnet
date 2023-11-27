@@ -3469,11 +3469,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\TP3\\TP3.csproj",
+      "projectUniqueName": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\TP3.csproj",
       "projectName": "TP3",
-      "projectPath": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\TP3\\TP3.csproj",
+      "projectPath": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\TP3.csproj",
       "packagesPath": "C:\\Users\\nour soussia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\TP3\\obj\\",
+      "outputPath": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

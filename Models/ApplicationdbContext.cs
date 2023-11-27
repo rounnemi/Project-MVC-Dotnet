@@ -35,6 +35,15 @@ namespace TP3.Models
                 modelBuilder.Entity<Genre>()
                 .HasData(c);
 
+            base.OnModelCreating(modelBuilder);
+            string MembershipJsonPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Data", "Membership.json");
+
+            string MembershipJSon = System.IO.File.ReadAllText(MembershipJsonPath);
+            List<membershiptype>? membershiptypes = System.Text.Json.JsonSerializer.Deserialize<List<membershiptype>>(MembershipJSon);
+            foreach (membershiptype c in membershiptypes)
+                modelBuilder.Entity<membershiptype>()
+                .HasData(c);
+
         }
      
 
