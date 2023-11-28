@@ -29,7 +29,7 @@ namespace TP3.Services
               return _db.Customers.ToList();
       }
 
-        public Customer GetById(int id)
+        public Customer GetById(uint id)
         {
             return _db.Customers.FirstOrDefault(customer => customer.Id == id);
         }

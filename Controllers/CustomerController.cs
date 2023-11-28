@@ -20,13 +20,13 @@ namespace TP3.Controllers
         {
             return View(_customerService.GetAll());
         }
-        public IActionResult Details(int id)
+        public IActionResult Details(uint id)
         {
             return View(_customerService.GetById(id));
 
 
         }
-        public IActionResult Delete(int id)
+        public IActionResult Delete(uint id)
         {
                _customerService.Delete(_customerService.GetById(id));
              return RedirectToAction("Index");
@@ -34,7 +34,7 @@ namespace TP3.Controllers
 
         }
 
-        public IActionResult Edit(int id)
+        public IActionResult Edit(uint id)
 
         {
            var members = _MembershipTypeService.getAll();
@@ -47,7 +47,7 @@ namespace TP3.Controllers
 
 
         }
-        public IActionResult AddCustomer(int id) {
+        public IActionResult AddCustomer(uint id) {
             var members = _MembershipTypeService.getAll();
             ViewBag.member = members.Select(members => new SelectListItem()
             {

@@ -1,15 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using TP3.Models;
-using TP3.Services;
 
-namespace TP3.Service
+namespace TP3.Services
 {
     public class MovieService : IMovieService
     {
         public readonly IMovieRepository _MovieRepository;
         private readonly ApplicationdbContext _db;
 
-        public MovieService( IMovieRepository movieRepository, ApplicationdbContext db)
+        public MovieService(IMovieRepository movieRepository, ApplicationdbContext db)
         {
             _MovieRepository = movieRepository;
             _db = db;

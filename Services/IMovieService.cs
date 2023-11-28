@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using TP3.Models;
 
-namespace TP3.Service
+namespace TP3.Services
 {
     public interface IMovieService
     {

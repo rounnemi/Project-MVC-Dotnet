@@ -64,7 +64,7 @@ namespace TP3.Migrations
                 name: "Customers",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MembershiptypeID = table.Column<string>(type: "nvarchar(450)", nullable: true)
@@ -83,7 +83,7 @@ namespace TP3.Migrations
                 name: "CustomerMovie",
                 columns: table => new
                 {
-                    CustomerId = table.Column<int>(type: "int", nullable: false),
+                    CustomerId = table.Column<long>(type: "bigint", nullable: false),
                     movieId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -108,8 +108,8 @@ namespace TP3.Migrations
                 columns: new[] { "Id", "GenreName" },
                 values: new object[,]
                 {
-                    { 1, null },
-                    { 2, null }
+                    { 1, "GenreFromJsonFile1" },
+                    { 2, "GenreFromJsonFile2" }
                 });
 
             migrationBuilder.InsertData(
@@ -117,9 +117,9 @@ namespace TP3.Migrations
                 columns: new[] { "id", "DiscountRate", "DurationINMonth", "SignUpfee" },
                 values: new object[,]
                 {
-                    { "1", 0.05f, 1, "10.00" },
-                    { "2", 0.1f, 3, "20.00" },
-                    { "3", 0.15f, 6, "30.00" }
+                    { "offre 1", 0.05f, 1, "10.00" },
+                    { "offre 2", 0.1f, 3, "20.00" },
+                    { "offre 3", 0.15f, 6, "30.00" }
                 });
 
             migrationBuilder.CreateIndex(

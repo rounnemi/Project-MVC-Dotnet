@@ -24,8 +24,8 @@ namespace TP3.Migrations
 
             modelBuilder.Entity("CustomerMovie", b =>
                 {
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
+                    b.Property<long>("CustomerId")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("movieId")
                         .HasColumnType("int");
@@ -39,11 +39,11 @@ namespace TP3.Migrations
 
             modelBuilder.Entity("TP3.Models.Customer", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("MembershiptypeID")
                         .HasColumnType("nvarchar(450)");
@@ -76,11 +76,13 @@ namespace TP3.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 1
+                            Id = 1,
+                            GenreName = "GenreFromJsonFile1"
                         },
                         new
                         {
-                            Id = 2
+                            Id = 2,
+                            GenreName = "GenreFromJsonFile2"
                         });
                 });
 
@@ -129,21 +131,21 @@ namespace TP3.Migrations
                     b.HasData(
                         new
                         {
-                            id = "1",
+                            id = "offre 1",
                             DiscountRate = 0.05f,
                             DurationINMonth = 1,
                             SignUpfee = "10.00"
                         },
                         new
                         {
-                            id = "2",
+                            id = "offre 2",
                             DiscountRate = 0.1f,
                             DurationINMonth = 3,
                             SignUpfee = "20.00"
                         },
                         new
                         {
-                            id = "3",
+                            id = "offre 3",
                             DiscountRate = 0.15f,
                             DurationINMonth = 6,
                             SignUpfee = "30.00"
