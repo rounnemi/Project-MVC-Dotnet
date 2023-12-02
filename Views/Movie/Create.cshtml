@@ -24,7 +24,7 @@
             </div>
             <br />
             <div class="form-group">
-                <label asp-for="GenreId" class="control-label">Membership Name</label>
+                <label asp-for="GenreId" class="control-label">Movie Genre </label>
                 <select asp-for="GenreId" class="form-control" asp-items="@(new SelectList(ViewBag.member, "Value", "Text"))"></select>
                 <span asp-validation-for="GenreId" class="text-red"></span>
             </div>

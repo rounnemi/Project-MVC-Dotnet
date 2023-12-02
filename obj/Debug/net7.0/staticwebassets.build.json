@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z+8FLKlGnVqFdaFTm3cQvH1KNyjzNF0td7vpS0ROI3Q=",
+  "Hash": "xGxbDBkFFSlku+MZRzPF+vnwYFj6VoI6IiUgBjYuSCw=",
   "Source": "TP3",
   "BasePath": "_content/TP3",
   "Mode": "Default",
@@ -134,6 +134,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\wwwroot\\images\\3.png",
+      "SourceId": "TP3",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\wwwroot\\",
+      "BasePath": "_content/TP3",
+      "RelativePath": "images/3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\3.png"
+    },
+    {
+      "Identity": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\wwwroot\\images\\tm1.png",
+      "SourceId": "TP3",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\wwwroot\\",
+      "BasePath": "_content/TP3",
+      "RelativePath": "images/tm1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\tm1.png"
     },
     {
       "Identity": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\wwwroot\\js\\site.js",

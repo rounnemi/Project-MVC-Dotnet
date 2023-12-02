@@ -3,25 +3,30 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TP3.Models;
+using TP3.Services;
+
 namespace TP3.Controllers
 {
     public class MovieController : Controller
     {
-        private readonly ApplicationdbContext _db;
-        public MovieController(ApplicationdbContext db)
+        private readonly IMovieService _IMovieService;
+     private readonly IGenreRepository _GenreRepository;
+        public MovieController(IMovieService IMovieService, IGenreRepository GenreRepository
+            )
         {
-            _db = db;
+            _IMovieService= IMovieService;
+            _GenreRepository= GenreRepository;
         }
 
         public ActionResult Index()
         {
-            var movies = _db.Movies.Include(m => m.Genre).ToList();
+            var movies = _IMovieService.GetMovieOrdreCroissant();
 
             return View(movies);
         }
         public ActionResult Create()
         {
-            var members = _db.Genre.ToList();
+            var members = _GenreRepository.Genres();
             ViewBag.member = members.Select(members => new SelectListItem()
             {
                 Text = members.GenreName.ToString(),
@@ -35,21 +40,7 @@ namespace TP3.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (movie.ImageFile != null && movie.ImageFile.Length > 0)
-                {
-                    // Enregistrez le fichier image sur le serveur
-                    var imagePath = Path.Combine("wwwroot/images", movie.ImageFile.FileName);
-                    using (var stream = new FileStream(imagePath, FileMode.Create))
-                    {
-                        movie.ImageFile.CopyTo(stream);
-                    }
-
-                    // Enregistrez le chemin de l'image dans la base de données
-                    movie.ImagePath = $"/images/{movie.ImageFile.FileName}";
-                }
-
-                _db.Movies.Add(movie);
-                _db.SaveChanges();
+                _IMovieService.Add(movie);
                 return RedirectToAction("Index");
             }
 
