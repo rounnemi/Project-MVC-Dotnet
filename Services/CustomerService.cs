@@ -5,39 +5,37 @@ namespace TP3.Services
 {
     public class CustomerService : ICustomerService
     {
-        private readonly ApplicationdbContext _db;
-        public CustomerService(ApplicationdbContext db) {
-            _db = db;
+        private readonly ICustomerRepository _customerRepository;
+        public CustomerService(ICustomerRepository customerRepository) {
+            _customerRepository = customerRepository;
 
         }
         public void Add(Customer customer)
         {
-              _db.Customers.Add(customer);
-                 _db.SaveChanges();
-            
+            _customerRepository.Add(customer);
+
+
 
         }
 
         public void Delete(Customer customer)
         {
-              _db.Customers.Remove(customer);
-              _db.SaveChanges();
+            _customerRepository.Delete(customer);
         }
 
         public ICollection<Customer> GetAll()
         {
-              return _db.Customers.ToList();
+              return _customerRepository.GetAll();
       }
 
-        public Customer GetById(uint id)
+        public Customer GetById(Guid id)
         {
-            return _db.Customers.FirstOrDefault(customer => customer.Id == id);
+            return _customerRepository.GetById(id);
         }
 
         public void Update(Customer customer)
         {
-              _db.Customers.Update(customer);
-                _db.SaveChanges();
+            _customerRepository.Update(customer);
         }
 
    

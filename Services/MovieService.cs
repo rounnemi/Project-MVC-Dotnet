@@ -51,11 +51,14 @@ namespace TP3.Services
         }
         public ICollection<Movie> GetByGenre(int genreId)
         {
+            //ici j'ai juste voulu utilisre le linqquery au lieu de le faire a travers les methodes du repository (tp4)
             return _db.Movies.Where(movie => movie.GenreId == genreId).ToList();
 
         }
         public ICollection<Movie> GetMovieOrdreCroissant()
         {
+            //ici j'ai juste voulu utilisre le linqquery au lieu de le faire a travers les methodes du repository (tp4)
+
             return _db.Movies.OrderBy(movie => movie.Title).ToList();
 
         }

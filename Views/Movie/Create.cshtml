@@ -3,15 +3,7 @@
     ViewData["Title"] = "Add Movie";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
-    <title>Add Movie</title>
-</head>
-<body>
+
 
     <div class="container mt-5">
 
@@ -31,7 +23,7 @@
             <br />
             <div class="form-group">
                 <label asp-for="ImageFile" class="control-label">Upload Image</label>
-                <input asp-for="ImageFile" type="file" class="form-control" />
+                <input asp-for="ImageFile" type="file" class="form-control" required />
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
             </div>
             <br />
@@ -40,7 +32,3 @@
 
         <a href="#" class="btn btn-secondary mt-3" onclick="history.go(-1);">Cancel</a>
     </div>
-
-    <script src="~/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

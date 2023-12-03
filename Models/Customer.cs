@@ -2,7 +2,7 @@
 {
     public class Customer
     {
-        public uint Id { get; set; }
+        public Guid Id { get; set; }
         public string ?Name { get; set; }
         public string? MembershiptypeID { get; set; }
         public membershiptype? membershiptype { get; set; }

@@ -6,40 +6,37 @@ namespace TP3.Services
 {
     public class MembershipTypeService : IMembershipTypeService
     {
-        private readonly ApplicationdbContext _db;  
-        public MembershipTypeService(ApplicationdbContext db)
+        private readonly IMembershipTypeRepository _membershipTypeRepository;
+        public MembershipTypeService(IMembershipTypeRepository membershipTypeRepository)
         {
-            _db = db;
+            _membershipTypeRepository = membershipTypeRepository;
         }
         public membershiptype Add(membershiptype membershiptype)
         {
-               _db.Memberships.Add(membershiptype);
-               _db.SaveChanges();
-               return membershiptype;
+
+            return _membershipTypeRepository.Add(membershiptype);
         }
 
         public membershiptype Delete(membershiptype membershiptype)
         {
-              _db.Memberships.Remove(membershiptype);
-              _db.SaveChanges();
-              return membershiptype;
+
+            return _membershipTypeRepository.Delete(membershiptype);
         }
 
         public ICollection<membershiptype> getAll()
         {
-            return _db.Memberships.ToList();
+            return _membershipTypeRepository.getAll();
         }
 
         public membershiptype GetByid(string id)
         {
-            return _db.Memberships.FirstOrDefault(mt => mt.id == id);
+            return _membershipTypeRepository.GetByid(id);
         }
 
         public membershiptype Upadate(membershiptype membershiptype)
         {
-            _db.Memberships.Update(membershiptype);
-            _db.SaveChanges();
-            return membershiptype;
+            
+            return _membershipTypeRepository.Upadate(membershiptype);
         }
     }
 }

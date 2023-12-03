@@ -1,26 +1,18 @@
 ﻿@model IEnumerable<TP3.Models.Customer>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
-    <title>Customer List</title>
-</head>
-<body>
-
+@{
+    ViewData["Title"] = "List Customer";
+}
     <div class="container mt-5">
         <a asp-controller="Movie" asp-action="Index" class="btn btn-primary">Movie List</a>
 
-        <a asp-action="AddCustomer" class="btn btn-primary">Add User</a>
+        <a asp-action="AddCustomer" class="btn btn-primary">Add Customer</a>
 
         <h2 class="mb-4">Customer List</h2>
 
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Id</th>
                     <th>Name</th>
                     <th>Membership</th>
                     <th>Actions</th>
@@ -31,7 +23,6 @@
                 @foreach (var customer in Model)
                 {
                     <tr>
-                        <td>@customer.Id</td>
                         <td>@customer.Name</td>
                         <td>@customer.MembershiptypeID</td>
                         <td>
@@ -43,6 +34,4 @@
         </table>
     </div>
 
-    <script src="~/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  

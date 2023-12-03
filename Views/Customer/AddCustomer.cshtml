@@ -1,15 +1,8 @@
 ﻿@model TP3.Models.Customer
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
-    <title>Add Customer</title>
-</head>
-<body>
-
+@{
+    ViewData["Title"] = "Add Customer";
+}
     <div class="container mt-5">
         <h1 class="mb-4">Create</h1>
 
@@ -17,23 +10,19 @@
 
         <form method="post" asp-action="CustomerAdd">
             <div class="form-group">
-                <label for="Name">Name</label>
+                <label asp-for="Name">Name</label>
                 <input type="text" class="form-control w-50" id="Name" name="Name" required />
             </div>
-
+            <br />
             <div class="form-group">
                 <label asp-for="MembershiptypeID" class="control-label">Membership Name</label>
                 <select asp-for="MembershiptypeID" class="form-control" asp-items="@(new SelectList(ViewBag.member, "Value", "Text"))"></select>
                 <span asp-validation-for="MembershiptypeID" class="text-red"></span>
             </div>
-
+            <br />
 
             <button type="submit" class="btn btn-primary">Add Customer</button>
         </form>
 
         <a href="#" class="btn btn-secondary mt-3" onclick="history.go(-1);">Cancel</a>
     </div>
-
-    <script src="~/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

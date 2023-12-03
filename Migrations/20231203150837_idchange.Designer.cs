@@ -12,8 +12,8 @@ using TP3.Models;
 namespace TP3.Migrations
 {
     [DbContext(typeof(ApplicationdbContext))]
-    [Migration("20231128103720_first")]
-    partial class first
+    [Migration("20231203150837_idchange")]
+    partial class idchange
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,8 +27,8 @@ namespace TP3.Migrations
 
             modelBuilder.Entity("CustomerMovie", b =>
                 {
-                    b.Property<long>("CustomerId")
-                        .HasColumnType("bigint");
+                    b.Property<Guid>("CustomerId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("movieId")
                         .HasColumnType("int");
@@ -42,11 +42,9 @@ namespace TP3.Migrations
 
             modelBuilder.Entity("TP3.Models.Customer", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("MembershiptypeID")
                         .HasColumnType("nvarchar(450)");

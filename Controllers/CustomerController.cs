@@ -20,13 +20,13 @@ namespace TP3.Controllers
         {
             return View(_customerService.GetAll());
         }
-        public IActionResult Details(uint id)
+        public IActionResult Details(Guid id)
         {
             return View(_customerService.GetById(id));
 
 
         }
-        public IActionResult Delete(uint id)
+        public IActionResult Delete(Guid id)
         {
                _customerService.Delete(_customerService.GetById(id));
              return RedirectToAction("Index");
@@ -34,14 +34,17 @@ namespace TP3.Controllers
 
         }
 
-        public IActionResult Edit(uint id)
+        public IActionResult Edit(Guid id)
 
         {
            var members = _MembershipTypeService.getAll();
+            /*Ici on a utilise le viewBag pour pouvoire creer une liste deroulante dans le form de creation d'un user
+             ou il peut choisir le nom du membership au quel il sera abonne (associe) et vu que on peut pas envoyer a une 
+            seule vie plusieurs type de model donc on utlise cet methode interdmediare */
             ViewBag.member = members.Select(members => new SelectListItem()
             {
                 Text = members.id.ToString(),
-                Value = members.id.ToString() // Ajoutez cette ligne pour définir la propriété Value
+                Value = members.id.ToString() 
             });
             return View(_customerService.GetById(id));
 

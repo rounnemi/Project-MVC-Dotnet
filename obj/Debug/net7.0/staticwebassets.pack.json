@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\wwwroot\\images\\1.png",
+      "PackagePath": "staticwebassets\\images\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\wwwroot\\images\\2.png",
+      "PackagePath": "staticwebassets\\images\\2.png"
+    },
+    {
       "Id": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\wwwroot\\images\\3.png",
       "PackagePath": "staticwebassets\\images\\3.png"
     },
