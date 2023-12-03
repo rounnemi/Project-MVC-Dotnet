@@ -21,6 +21,12 @@
                 <span asp-validation-for="GenreId" class="text-red"></span>
             </div>
             <br />
+        <div class="form-group">
+            <label asp-for="addedAT" class="control-label">Release Date</label>
+            <input asp-for="addedAT" type="date" class="form-control" />
+            <span asp-validation-for="addedAT" class="text-danger"></span>
+        </div>
+        <br />
             <div class="form-group">
                 <label asp-for="ImageFile" class="control-label">Upload Image</label>
                 <input asp-for="ImageFile" type="file" class="form-control" required />

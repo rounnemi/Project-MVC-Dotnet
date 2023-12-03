@@ -11,6 +11,7 @@ namespace TP3.Models
         public string? ImagePath { get; set; }
         [NotMapped]
         public IFormFile ImageFile { get; set; }
+        public DateTime? addedAT { get; set; }
         public ICollection<Customer> ? Customer { get; set; }
     }
 }
