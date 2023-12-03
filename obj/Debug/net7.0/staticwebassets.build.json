@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "d0aB3+KBrDRIrrcQqMQ8g8XovO8TNmRmAAHDU/ROu08=",
+  "Hash": "8/f61gTh9HkSuAEiUhDFmZmXJME9vok1WqU/PsKhE2Q=",
   "Source": "TP3",
   "BasePath": "_content/TP3",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\wwwroot\\images\\Capture d'écran 2023-11-26 090511.png",
+      "SourceId": "TP3",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\wwwroot\\",
+      "BasePath": "_content/TP3",
+      "RelativePath": "images/Capture d'écran 2023-11-26 090511.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Capture d'écran 2023-11-26 090511.png"
     },
     {
       "Identity": "C:\\Users\\nour soussia\\Desktop\\Bureau\\GL3 Sem1\\Dotnet\\MVCProject\\wwwroot\\images\\tm1.png",

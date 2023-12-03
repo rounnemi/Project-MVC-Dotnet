@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Services"
+    "\\Models",
+    "\\Services",
+    "\\wwwroot",
+    "\\wwwroot\\Data"
   ],
-  "SelectedNode": "\\TP3.sln",
+  "SelectedNode": "\\Models\\ApplicationdbContext.cs",
   "PreviewInSolutionExplorer": false
 }

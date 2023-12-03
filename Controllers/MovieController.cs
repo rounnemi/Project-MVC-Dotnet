@@ -11,8 +11,7 @@ namespace TP3.Controllers
     {
         private readonly IMovieService _IMovieService;
      private readonly IGenreRepository _GenreRepository;
-        public MovieController(IMovieService IMovieService, IGenreRepository GenreRepository
-            )
+        public MovieController(IMovieService IMovieService, IGenreRepository GenreRepository )
         {
             _IMovieService= IMovieService;
             _GenreRepository= GenreRepository;
